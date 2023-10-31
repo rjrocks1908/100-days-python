@@ -10,8 +10,10 @@ FOLLOWER_COUNT = "follower_count"
 DESCRIPTION = "description"
 COUNTRY = "country"
 
+
 def generateRandomData():
     return data[random.randint(0, dataLen - 1)]
+
 
 def getResults(candA, candB, userInput):
     global score
@@ -27,6 +29,7 @@ def getResults(candA, candB, userInput):
             return True
         else:
             return False
+
 
 def game():
     print(art.logo)
