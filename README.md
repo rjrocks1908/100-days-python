@@ -17,4 +17,5 @@ This repository contains cool python project for every level and for every kind 
 - Day 15 - Coffee Machine
 - Day 16 - Coffee Machine (OOPS)
 - Day 17 - Quiz Game
-- Day 18 - Hirst Dot Painting
+- Day 18 - Hirst Dot Painting (Using Turtle)
+- Day 19 - Turtle Race (Using Turtle)
