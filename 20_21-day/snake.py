@@ -1,4 +1,5 @@
 import turtle as tt
+from typing import Tuple, List
 
 SNAKE_SHAPE = "square"
 SNAKE_COLOR = "white"
@@ -7,7 +8,7 @@ MOVE_DISTANCE = 20
 
 class Snake:
     def __init__(self):
-        self.segments = []
+        self.segments: List[tt.Turtle] = []
         self.create_snake()
         self.head: tt.Turtle = self.segments[0]
 
@@ -15,13 +16,19 @@ class Snake:
         x = 0
         y = 0
         for i in range(3):
-            new_segment = tt.Turtle(shape=SNAKE_SHAPE)
-            new_segment.penup()
-            new_segment.color(SNAKE_COLOR)
-            new_segment.width(width=20)
-            new_segment.goto(x=x - i * 20, y=y)
-            new_segment.heading()
-            self.segments.append(new_segment)
+            self.add_segment((x - i * 20, y))
+
+    def add_segment(self, position: Tuple[float, float]):
+        new_segment = tt.Turtle(shape=SNAKE_SHAPE)
+        new_segment.penup()
+        new_segment.color(SNAKE_COLOR)
+        new_segment.width(width=20)
+        new_segment.goto(position)
+        new_segment.heading()
+        self.segments.append(new_segment)
+
+    def extend(self):
+        self.add_segment(self.segments[-1].position())
 
     def move(self):
         for seg_num in range(len(self.segments) - 1, 0, -1):
