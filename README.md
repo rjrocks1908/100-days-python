@@ -19,4 +19,5 @@ This repository contains cool python project for every level and for every kind 
 - Day 17 - Quiz Game
 - Day 18 - Hirst Dot Painting (Using Turtle)
 - Day 19 - Turtle Race (Using Turtle)
-- Day 20-21 - Snake Game
+- Day 20-21 - Snake Game (Using Turtle)
+- Day 22 - Pong Game (Using Turtle)
