@@ -23,10 +23,8 @@ missing_states = []
 
 
 def get_missed_states():
-    for state in state_names:
-        if state not in correct_guesses:
-            missing_states.append(state)
-
+    global missing_states
+    missing_states = [state for state in state_names if state not in correct_guesses]
     new_data = pd.Series(missing_states)
     new_data.to_csv("states_to_learn.csv")
 
